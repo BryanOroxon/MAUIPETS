@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIPETS.Views.DonatePage"
+             Title="Please Donate">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".05*" />
+            <ColumnDefinition Width=".9*" />
+            <ColumnDefinition Width=".05*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="300" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Label FontSize="30" HorizontalTextAlignment="Start" Grid.Column="1" TranslationY="20" TextColor="Black" >
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Save a life " />
+                        <Span Text="&#xf1b0;" FontFamily="fontello" FontSize="32"/>
+                        <Span Text=" &#xf1b0;" FontFamily="fontello" FontSize="32"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+         </Label>
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            TranslationY="10"
+            Text="Donate today."
+            FontSize="30"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            TextColor="Black" />
+        <Frame
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#9EFADC"
+            CornerRadius="20"
+            BorderColor="#89E2FA">
+            <Image
+                x:Name="Imagedog"
+                Source="dog2"
+                HeightRequest="60"
+                HorizontalOptions="Center"/>
+        </Frame>
+        <StackLayout
+            Grid.Row="4"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            Orientation="Horizontal">
+            <Button
+                x:Name="donate25"
+                Margin="5"
+                Clicked="donate25_Clicked"
+                BackgroundColor="#FFC300"
+                Text="$25"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10" />
+            <Button
+                x:Name="donate50"
+                Margin="5"
+                Clicked="donate50_Clicked"
+                BackgroundColor="#FFC300"
+                Text="$50"
+                TextColor="White"
+                CornerRadius="10"
+                FontAttributes="Bold" />
+            <Button
+                x:Name="donate100"
+                Margin="5"
+                Clicked="donate100_Clicked"
+                CornerRadius="10"
+                BackgroundColor="#FFC300"
+                Text="$100"
+                TextColor="White"
+                FontAttributes="Bold" />
+        </StackLayout>
+        <Label
+            x:Name="labelDonate"
+            Grid.Row="5"
+            Grid.Column="1"
+            HorizontalOptions="CenterAndExpand"
+            Text="Thanks for your support " />
+
+        <Button
+            x:Name="Donate"
+            Grid.Row="6"
+            Grid.Column="1"
+            BackgroundColor="Orange"
+            Text="Please Donate"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="20" 
+            Clicked="Donate_Clicked"/>
+    </Grid>
+</ContentPage>

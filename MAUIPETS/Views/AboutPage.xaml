@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MAUIPETS.ViewModels"
+             x:Class="MAUIPETS.Views.AboutPage"
+             BackgroundColor="{StaticResource Secondary}"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="150" />
+
+                </Grid.RowDefinitions>
+                <Image
+                    Grid.Row="0"
+                    Source="dotnet_bot"
+                    WidthRequest="80"/>
+                <Frame
+                    Grid.Row="1"
+                    Margin="15,5,15,5"
+                    BackgroundColor="Black"
+                    Opacity=".6"
+                    BorderColor="OrangeRed"
+                    HasShadow="True"
+                    CornerRadius="20">
+
+                    <StackLayout VerticalOptions="Center">
+                        <Label
+                            Text="MAUIPETS"
+                            FontSize="40"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            HorizontalOptions="CenterAndExpand" />
+                        <Label
+                            Text="By Luis Bryan Oroxón Ramírez "
+                            TextColor="White"
+                            FontAttributes="Bold" />
+                        <Label TextColor="White" FontSize="40" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans> 
+                                        <Span Text="&#xf309;" TextColor="White" FontFamily="fontello" FontSize="20" />
+                                        <Span Text=" @BryanOroxon" FontSize="16" TextColor="White" FontAttributes="Bold" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label TextColor="White" FontSize="40" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="&#xf318;" TextColor="White" FontFamily="fontello" FontSize="20" />
+                                        <Span Text=" www.linkedin.com/in/bryan-oroxon" FontSize="16" TextColor="White" FontAttributes="Bold" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                            FontSize="Medium"
+                            x:Name="LabelName"
+                            Text=""
+                            TextColor="White"
+                            FontAttributes="Bold" />
+                        <Label
+                            x:Name="LabelVersion"
+                            Text=" 0 "
+                            TextColor="White"
+                            FontAttributes="Bold" />
+                        <Label
+                            Text="This App was made for .NET MAUI CHALLENGE"
+                            TextColor="White" />
+                        
+                    </StackLayout>
+
+                </Frame>
+                <Button
+                    Grid.Row="2"
+                    Margin="15"
+                    HeightRequest="60"
+                    CornerRadius="20"
+                    BackgroundColor="Orange"
+                    Command="{Binding OpenWebCommand}"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="To learn more about .NET MAUI, press here" />
+            </Grid>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
