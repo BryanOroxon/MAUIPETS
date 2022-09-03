@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUIPETS.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUIPETS"
+    xmlns:view="clr-namespace:MAUIPETS.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="MyHome" 
+        ContentTemplate="{DataTemplate view:HomePage}"
+        Route="MainPage" >
+        <ShellContent.Icon>
+            <FontImageSource Color="Orange" Glyph="&#xf1b0;" FontFamily="{OnPlatform iOS=Fontello, MacCatalyst=fontello.ttf, WinUI=Fontello,  Android=fontello.ttf}"
+                                     Size="Medium" />
+            
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent
+        Title="Donate" 
+        ContentTemplate="{DataTemplate view:DonatePage}"
+        Route="Donate" >
+        <ShellContent.Icon>
+            <FontImageSource Color="Red" Glyph="&#xe803;"  FontFamily="{OnPlatform iOS=Fontello, MacCatalyst=fontello.ttf, WinUI=Fontello,  Android=fontello.ttf}"
+                                     Size="Medium" />
+            
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent
+        Title="About" 
+        ContentTemplate="{DataTemplate view:AboutPage}"
+        Route="About" >
+        <ShellContent.Icon>
+            <FontImageSource Color="BlueViolet" Glyph="&#xe801;"  FontFamily="{OnPlatform iOS=Fontello, MacCatalyst=fontello.ttf, WinUI=Fontello,  Android=fontello.ttf}"
+                                     Size="Medium" />
+            
+        </ShellContent.Icon>
+    </ShellContent>
+    <TabBar>
+        <Tab Title="Pets">
+            <Tab.Icon>
+                <FontImageSource Glyph="&#xf1b0;" FontFamily="{OnPlatform iOS=Fontello, MacCatalyst=fontello.ttf, WinUI=Fontello,  Android=fontello.ttf}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:HomePage}" />
+        </Tab>
+        <Tab Title=" Donate">
+            <Tab.Icon>
+                <FontImageSource Glyph="&#xe803;" FontFamily="{OnPlatform iOS=Fontello, MacCatalyst=fontello.ttf, WinUI=Fontello,  Android=fontello.ttf}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:DonatePage}" />
+        </Tab>
+        <Tab Title=" About">
+            <Tab.Icon>
+                <FontImageSource Glyph="&#xe801;" FontFamily="{OnPlatform iOS=Fontello, MacCatalyst=fontello.ttf, WinUI=Fontello,  Android=fontello.ttf}"/>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate view:AboutPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>
+

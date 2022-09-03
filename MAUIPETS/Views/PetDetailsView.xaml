@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIPETS.Views.PetDetailsView"
+             Title="{Binding Title}"
+             Shell.TabBarIsVisible="False">
+    <VerticalStackLayout>
+        <ScrollView>
+        <Grid
+            ColumnSpacing="0"
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+            <!--  Pet Image  -->
+            <Image
+                Aspect="AspectFill"
+                Source="{Binding Pets.Image}" />
+            <Image
+                Margin="0,-1,0,-1"
+                Aspect="Fill"
+                Source="curvedmask.png"
+                VerticalOptions="End" />
+            <!--  Pet Name  -->
+            <StackLayout
+                Grid.Row="1"
+                HorizontalOptions="Center">
+                <Label
+                    Text="{Binding Pets.Name}"
+                    FontSize="24"
+                    FontFamily="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Margin="0,-5"
+                    Text="{Binding Pets.Type}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <!--  Pet data  -->
+            <Grid
+                Grid.Row="2"
+                Margin="0,20,0,15"
+                ColumnSpacing="10"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    VerticalOptions="Start"
+                    HorizontalOptions="CenterAndExpand">
+                    <Label
+                        Text="Location"
+                        FontAttributes="Bold" />
+                    <Label Text="{Binding Pets.Location}" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label
+                        Text="Breed"
+                        FontAttributes="Bold" />
+                    <Label Text="{Binding Pets.Breed}" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <Label
+                        Text="Gender"
+                        FontAttributes="Bold" />
+                    <Label Text="{Binding Pets.Gender}" />
+                </StackLayout>
+            </Grid>
+            <!--  pet description  -->
+            <StackLayout VerticalOptions="Center"
+                Grid.Row="3"
+                
+                Margin="10,10">
+                <Label
+                    Text="{Binding Pets.Social}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="{Binding Pets.Health}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    Text="{Binding Pets.Meet}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

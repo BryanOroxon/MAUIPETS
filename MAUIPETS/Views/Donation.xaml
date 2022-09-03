@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIPETS.Views.Donation"
+             Title="Thanks for donating"
+             Shell.TabBarIsVisible="False">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".05*" />
+            <ColumnDefinition Width=".9*" />
+            <ColumnDefinition Width=".05*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <StackLayout
+            Grid.Column="1"
+            Orientation="Horizontal"
+            TranslationY="20">
+            <Label
+                Text="High five!"
+                FontSize="30"
+                VerticalOptions="End"
+                HorizontalOptions="Start"
+                TextColor="Black" />
+            <Label
+                Text="&#xf1b0;"
+                FontFamily="fontello"
+                FontSize="30"
+                TextColor="Black" />
+        </StackLayout>
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            TranslationY="10"
+            Text="Well Done"
+            FontSize="30"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            TextColor="Black" />
+        <Frame
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#9EFADC"
+            CornerRadius="20"
+            BorderColor="#89E2FA">
+            <Image
+                Source="dog3"
+                VerticalOptions="End"
+                HorizontalOptions="Center" />
+        </Frame>
+        <Label
+            Grid.Row="4"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            TextColor="Black"
+            FontAttributes="Italic"
+            FontSize="Title"
+            Text="You just donate!!!" />
+        <Label
+            Grid.Row="5"
+            Grid.Column="1"
+            FontSize="20"
+            HorizontalOptions="CenterAndExpand"
+            Text="Thanks for your payment, our dear pets can sleep tight!" />
+
+    </Grid>
+</ContentPage>
