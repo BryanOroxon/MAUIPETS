@@ -20,7 +20,7 @@ Proyect for .NET MAUI CHALLENGE, MAUIPETS is a demo Adoption Pet App.
 - SHADOWS
 - SHAPES
 
-##Images Preview
+## Images Preview
 [![MAUIPETS1](https://raw.githubusercontent.com/BryanOroxon/MAUIPETS/main/MAUIPETS/ScreenShots/Mauipets1.png "MAUIPETS1")](https://raw.githubusercontent.com/BryanOroxon/MAUIPETS/main/MAUIPETS/ScreenShots/Mauipets1.png "MAUIPETS1")
 
 
