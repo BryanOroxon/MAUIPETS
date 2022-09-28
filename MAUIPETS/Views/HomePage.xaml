@@ -121,7 +121,7 @@
                 WidthRequest="50"
                 HeightRequest="50"
                 TranslationY="5"
-                Source="dog1"
+                Source="dog1.png"
                 HorizontalOptions="CenterAndExpand" />
         </Grid>
     </ScrollView>

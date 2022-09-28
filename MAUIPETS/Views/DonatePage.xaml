@@ -41,7 +41,7 @@
             </Frame.Shadow>
             <Image
                 x:Name="Imagedog"
-                Source="dog2"
+                Source="dog2.png"
                 HeightRequest="60"
                 HorizontalOptions="Center"/>
         </Frame>

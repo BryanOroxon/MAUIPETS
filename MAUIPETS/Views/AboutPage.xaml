@@ -15,7 +15,7 @@
                 <Image
                     Grid.Row="0"
                     Grid.Column="1"
-                    Source="dotnet_bot"
+                    Source="dotnet_bot.png"
                     WidthRequest="80"/>
                 <!-- 2. Data App-->
                 <Frame

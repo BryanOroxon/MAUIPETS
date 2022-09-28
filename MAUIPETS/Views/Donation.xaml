@@ -53,7 +53,7 @@
                             />
             </Frame.Shadow>
             <Image
-                Source="dog3"
+                Source="dog3.png"
                 VerticalOptions="End"
                 HeightRequest="100"
                 HorizontalOptions="Center" />
