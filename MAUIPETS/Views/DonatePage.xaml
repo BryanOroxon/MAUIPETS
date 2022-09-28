@@ -1,89 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIPETS.Views.DonatePage"
-             Title="Please Donate">
+<ContentPage
+    x:Class="MAUIPETS.Views.DonatePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Please Donate">
     <Grid ColumnDefinitions=".05*,.9*,.05*" RowDefinitions="60,60,300,30,50,50,50">
-        <!-- 1. Title-->
-        <Label FontSize="30" HorizontalTextAlignment="Start" Grid.Column="1" TranslationY="20" TextColor="Black" >
+        <!--  1. Title  -->
+        <Label
+            Grid.Column="1"
+            FontSize="30"
+            HorizontalTextAlignment="Start"
+            TextColor="Black"
+            TranslationY="20">
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
                         <Span Text="Save a life " />
-                        <Span Text="&#xf1b0;" FontFamily="fontello" FontSize="32"/>
-                        <Span Text=" &#xf1b0;" FontFamily="fontello" FontSize="32"/>
+                        <Span
+                            FontFamily="fontello"
+                            FontSize="32"
+                            Text="&#xf1b0;" />
+                        <Span
+                            FontFamily="fontello"
+                            FontSize="32"
+                            Text=" &#xf1b0;" />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
-         </Label>
+        </Label>
         <Label
             Grid.Row="1"
             Grid.Column="1"
-            TranslationY="10"
-            Text="Donate today."
             FontSize="30"
-            VerticalOptions="Start"
             HorizontalOptions="Start"
-            TextColor="Black" />
-        <!-- 2. Image-->
+            Text="Donate today."
+            TextColor="Black"
+            TranslationY="10"
+            VerticalOptions="Start" />
+        <!--  2. Image  -->
         <Frame
             Grid.Row="2"
             Grid.Column="1"
             BackgroundColor="#9EFADC"
+            BorderColor="#89E2FA"
             CornerRadius="20"
-            HasShadow="True"
-            BorderColor="#89E2FA">
+            HasShadow="True">
             <Frame.Shadow>
-                <Shadow Brush="Black"
-                            Offset="6,10"
-                            Opacity="0.8    "
-                            />
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.8    "
+                    Offset="6,10" />
             </Frame.Shadow>
             <Image
                 x:Name="Imagedog"
-                Source="dog2.png"
                 HeightRequest="60"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Source="dog2.png" />
         </Frame>
-        <!-- 3. Donate options -->
+        <!--  3. Donate options  -->
         <StackLayout
             Grid.Row="4"
             Grid.Column="1"
             HorizontalOptions="Center"
             Orientation="Horizontal">
             <Button
-                BorderColor="DarkOrange"
-                BorderWidth="3"
                 x:Name="donate25"
                 Margin="5"
-                Clicked="donate25_Clicked"
                 BackgroundColor="#FFC300"
-                Text="$25"
-                TextColor="White"
-                FontAttributes="Bold"
-                CornerRadius="10" />
-            <Button
                 BorderColor="DarkOrange"
                 BorderWidth="3"
+                Clicked="donate25_Clicked"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                Text="$25"
+                TextColor="White" />
+            <Button
                 x:Name="donate50"
                 Margin="5"
-                Clicked="donate50_Clicked"
                 BackgroundColor="#FFC300"
-                Text="$50"
-                TextColor="White"
-                CornerRadius="10"
-                FontAttributes="Bold" />
-            <Button
                 BorderColor="DarkOrange"
                 BorderWidth="3"
+                Clicked="donate50_Clicked"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                Text="$50"
+                TextColor="White" />
+            <Button
                 x:Name="donate100"
                 Margin="5"
+                BackgroundColor="#FFC300"
+                BorderColor="DarkOrange"
+                BorderWidth="3"
                 Clicked="donate100_Clicked"
                 CornerRadius="10"
-                BackgroundColor="#FFC300"
+                FontAttributes="Bold"
                 Text="$100"
-                TextColor="White"
-                FontAttributes="Bold" />
+                TextColor="White" />
         </StackLayout>
         <Label
             x:Name="labelDonate"
@@ -91,23 +103,23 @@
             Grid.Column="1"
             HorizontalOptions="CenterAndExpand"
             Text="Thanks for your support " />
-        <!-- 4. Button Donate-->
+        <!--  4. Button Donate  -->
         <Button
             x:Name="Donate"
             Grid.Row="6"
             Grid.Column="1"
             BackgroundColor="Orange"
             BorderColor="OrangeRed"
-            Text="Please Donate"
-            TextColor="White"
-            FontAttributes="Bold"
+            Clicked="Donate_Clicked"
             CornerRadius="20"
-            Clicked="Donate_Clicked">
+            FontAttributes="Bold"
+            Text="Please Donate"
+            TextColor="White">
             <Button.Shadow>
-                <Shadow Brush="Black"
-                            Offset="6,10"
-                            Opacity="0.8    "
-                            />
+                <Shadow
+                    Brush="Black"
+                    Opacity="0.8    "
+                    Offset="6,10" />
             </Button.Shadow>
 
         </Button>

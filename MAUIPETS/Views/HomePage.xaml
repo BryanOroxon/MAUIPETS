@@ -1,129 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIPETS.Views.HomePage"
-             xmlns:vm="clr-namespace:MAUIPETS.ViewModels"
+<ContentPage
+    x:Class="MAUIPETS.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:MAUIPETS.Models"
+    xmlns:vm="clr-namespace:MAUIPETS.ViewModels"
+    Title="{Binding Title}"
+    x:DataType="vm:HomePageViewModel">
+    <RefreshView Command="{Binding GetPetsCommand}" IsRefreshing="{Binding IsRefreshing}">
+        <ScrollView>
+            <Grid ColumnDefinitions="0.5*,Auto,0.5*" RowDefinitions="10,50,550,90,Auto,50">
+                <Label
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="Paws and Purrs"
+                    TextColor="Black"
+                    VerticalOptions="End" />
 
-             xmlns:model="clr-namespace:MAUIPETS.Models"
-             x:DataType="vm:HomePageViewModel"
-             Title="{Binding Title}">
-    <RefreshView
-                Command="{Binding GetPetsCommand}"
-                IsRefreshing="{Binding IsRefreshing}">
-    <ScrollView>
-        <Grid RowDefinitions="10,50,550,90,Auto,50" ColumnDefinitions="0.5*,Auto,0.5*" >
-            <Label
-                Grid.Row="1"
-                Grid.ColumnSpan="3"
-                HorizontalOptions="Center"
-                VerticalOptions="End"
-                FontAttributes="Bold"
-                Text="Paws and Purrs"
-                TextColor="Black"
-                FontSize="30" />
-            
                 <CollectionView
                     x:Name="PetsList"
                     Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
                     BackgroundColor="White"
-                    SelectionMode="Single"
+                    ItemsSource="{Binding Pets}"
                     SelectedItem="{Binding SelectedPet}"
                     SelectionChangedCommand="{Binding GoToDetailsCommand}"
-                    ItemsSource="{Binding Pets}" >
+                    SelectionMode="Single">
                     <CollectionView.ItemsLayout>
-                     <GridItemsLayout Orientation="Vertical" Span="2" />
-                 </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate  >
-                
+                        <GridItemsLayout Orientation="Vertical" Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+
                         <DataTemplate x:DataType="model:Pet">
                             <StackLayout>
                                 <Frame
-                                
                                     Margin="10"
-                                    HasShadow="True"
                                     BorderColor="OrangeRed"
                                     CornerRadius="15"
+                                    HasShadow="True"
                                     HeightRequest="320"
                                     HorizontalOptions="Center"
-                                    VerticalOptions="CenterAndExpand" >
+                                    VerticalOptions="CenterAndExpand">
                                     <Frame.Shadow>
-                                        <Shadow Brush="Black"
-                                                Offset="6,10"
-                                                Opacity="0.8    " />
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="0.8    "
+                                            Offset="6,10" />
                                     </Frame.Shadow>
                                     <StackLayout>
                                         <Label
-                                            Text="{Binding Name}"
                                             FontAttributes="Bold"
                                             FontSize="Large"
                                             HorizontalOptions="Center"
+                                            Text="{Binding Name}"
                                             VerticalOptions="Center" />
                                         <Image
-                                            Source="{Binding Image}"
                                             Aspect="AspectFit"
                                             HeightRequest="200"
-                                            WidthRequest="200"
-                                            HorizontalOptions="Center" />
+                                            HorizontalOptions="Center"
+                                            Source="{Binding Image}"
+                                            WidthRequest="200" />
+                                        <Label HorizontalOptions="Center" Text="{Binding Gender}" />
                                         <Label
-                                            Text="{Binding Gender}"
-                                            HorizontalOptions="Center" />
-                                        <Label
-                                            Text="{Binding Breed}"
-                                            HorizontalTextAlignment="Center"
-                                            LineBreakMode="WordWrap" 
                                             FontAttributes="Italic"
                                             HorizontalOptions="Center"
-                                            MaxLines="5"/>
+                                            HorizontalTextAlignment="Center"
+                                            LineBreakMode="WordWrap"
+                                            MaxLines="5"
+                                            Text="{Binding Breed}" />
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate >
+                    </CollectionView.ItemTemplate>
 
                 </CollectionView>
-            <Border
-                Margin="10"
-                BackgroundColor="#3D5AFE"
+                <Border
+                    Grid.Row="4"
+                    Grid.RowSpan="4"
                     Grid.Column="0"
                     Grid.ColumnSpan="3"
-                Stroke="#6600FF"
-                StrokeThickness="10"
-                HeightRequest="120"
-                Grid.Row="4"
-                Grid.RowSpan="4"
-                StrokeShape="RoundRectangle 0 50 40 15"
-                TranslationY="-20"
-                >
-                <Border.Shadow>
-                    <Shadow Brush="Black"
-                            Offset="6,10"
+                    Margin="10"
+                    BackgroundColor="#3D5AFE"
+                    HeightRequest="120"
+                    Stroke="#6600FF"
+                    StrokeShape="RoundRectangle 0 50 40 15"
+                    StrokeThickness="10"
+                    TranslationY="-20">
+                    <Border.Shadow>
+                        <Shadow
+                            Brush="Black"
                             Opacity="0.8    "
-                            />
+                            Offset="6,10" />
 
-                </Border.Shadow>
-            </Border>
-            <Button
-                HeightRequest="60"
-                Grid.Row="4"
-                Grid.Column="1"
-                TranslationY="5"
-                BackgroundColor="Orange"
-                CornerRadius="25"
-                Clicked="Donate_Clicked"
-                Text="Save a Life. Donate a Shelter Pet!"
-                FontSize="Large"
-                FontAttributes="Bold"/>
-            <Image
-                Grid.Row="3"
-                Grid.Column="1"
-                WidthRequest="50"
-                HeightRequest="50"
-                TranslationY="5"
-                Source="dog1.png"
-                HorizontalOptions="CenterAndExpand" />
-        </Grid>
-    </ScrollView>
+                    </Border.Shadow>
+                </Border>
+                <Button
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    BackgroundColor="Orange"
+                    Clicked="Donate_Clicked"
+                    CornerRadius="25"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HeightRequest="60"
+                    Text="Save a Life. Donate a Shelter Pet!"
+                    TranslationY="5" />
+                <Image
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    HeightRequest="50"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="dog1.png"
+                    TranslationY="5"
+                    WidthRequest="50" />
+            </Grid>
+        </ScrollView>
     </RefreshView>
 </ContentPage>

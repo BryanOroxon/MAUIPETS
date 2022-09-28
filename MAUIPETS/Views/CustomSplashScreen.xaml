@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIPETS.Views.CustomSplashScreen"
-             Title=""
-             BackgroundColor="{StaticResource Primary}">
+<ContentPage
+    x:Class="MAUIPETS.Views.CustomSplashScreen"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title=""
+    BackgroundColor="{StaticResource Primary}">
     <VerticalStackLayout>
-        <Image Source="pets.png"
-               x:Name="pets"
-               HorizontalOptions="Start"
-               WidthRequest="200"
-               Aspect="AspectFit"/>
-
-        <ActivityIndicator IsRunning="True"
-                           Color="White"/>
-
-        <Label Text="Loading information..."
-               HorizontalOptions="Center"
-               TextColor="White"/>
-
+        <Image
+            x:Name="pets"
+            Aspect="AspectFit"
+            HorizontalOptions="Start"
+            Source="pets.png"
+            VerticalOptions="Center"
+            WidthRequest="200" />
+        <ActivityIndicator IsRunning="True" Color="White" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Loading information..."
+            TextColor="White"
+            VerticalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>
