@@ -1,37 +1,69 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using MAUIPETS.Services;
-using MAUIPETS.Models;
+﻿using MAUIPETS.Services;
 
+namespace MAUIPETS.ViewModels;
 
-namespace MAUIPETS.ViewModels
+public partial class HomePageViewModel : BaseViewModel
 {
-	public class HomePageViewModel : BindableObject
+    public ObservableCollection<Pet> Pets { get; } = new();
+    PetService petService;
+    public HomePageViewModel(PetService petService)
     {
-        ObservableCollection<Pet> _pets;
+        Title = "Choose your next big friend";
+        this.petService = petService;
+        
+    }
 
+    [ObservableProperty]
+    bool isRefreshing=true;
 
-        public HomePageViewModel()
-		{
-            string Title="HOla Bryan!!";
-			LoadPetsList();
-		}
+    [ObservableProperty]
+    Pet selectedPet;
 
-        public ObservableCollection<Pet> Pets
+    [RelayCommand]
+    async Task GetPetsAsync()
+    {
+        if (IsBusy)
+            return;
+
+        try
         {
-            get { return _pets; }
-            set
+            IsBusy = true;
+            Console.WriteLine("Buscando Mascotas");
+
+            var pets = await petService.GetPets();
+
+            if (Pets.Count != 0)
+                Pets.Clear();
+
+            foreach (var pet in pets)
+                Pets.Add(pet);
+
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Unable to get Pets: {ex.Message}");
+            Console.WriteLine("No encontramos Mascotas");
+            await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+        }
+        finally
+        {
+            IsBusy = false;
+            IsRefreshing = false;
+        }
+
+    }
+
+    [RelayCommand]
+    async Task GoToDetails()
+    {
+        if (selectedPet == null)
+            return;
+
+        var data = new Dictionary<string, object>
             {
-                _pets = value;
-                OnPropertyChanged();
-            }
-        }
+                {"Pet", selectedPet }
+            };
 
-        void LoadPetsList()
-        {
-            var items = PetService.PetsData;
-            Pets = new ObservableCollection<Pet>(items);
-        }
+        await Shell.Current.GoToAsync(nameof(PetDetailsView), true, data);
     }
 }
-

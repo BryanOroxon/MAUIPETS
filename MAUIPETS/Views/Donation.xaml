@@ -4,30 +4,23 @@
              x:Class="MAUIPETS.Views.Donation"
              Title="Thanks for donating"
              Shell.TabBarIsVisible="False">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".05*" />
-            <ColumnDefinition Width=".9*" />
-            <ColumnDefinition Width=".05*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="200" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-        </Grid.RowDefinitions>
+    <Grid ColumnDefinitions=".05*,.9*,.05*"
+          RowDefinitions="40,70,250,30,50,50,50">
+        <!-- 1. Title-->
         <StackLayout
             Grid.Column="1"
             Orientation="Horizontal"
             TranslationY="20">
             <Label
-                Text="High five!"
+                Text="High five! "
                 FontSize="30"
                 VerticalOptions="End"
                 HorizontalOptions="Start"
+                TextColor="Black" />
+            <Label
+                Text="&#xf1b0; "
+                FontFamily="fontello"
+                FontSize="30"
                 TextColor="Black" />
             <Label
                 Text="&#xf1b0;"
@@ -44,17 +37,28 @@
             VerticalOptions="Start"
             HorizontalOptions="Start"
             TextColor="Black" />
+        <!-- 2. Image-->
         <Frame
             Grid.Row="2"
             Grid.Column="1"
+            Margin="10,50,10,10"
             BackgroundColor="#9EFADC"
             CornerRadius="20"
+            HasShadow="True"
             BorderColor="#89E2FA">
+            <Frame.Shadow>
+                <Shadow Brush="Black"
+                            Offset="6,10"
+                            Opacity="0.8    "
+                            />
+            </Frame.Shadow>
             <Image
                 Source="dog3"
                 VerticalOptions="End"
+                HeightRequest="100"
                 HorizontalOptions="Center" />
         </Frame>
+        <!-- 3. Message-->
         <Label
             Grid.Row="4"
             Grid.Column="1"
@@ -68,7 +72,7 @@
             Grid.Column="1"
             FontSize="20"
             HorizontalOptions="CenterAndExpand"
-            Text="Thanks for your payment, our dear pets can sleep tight!" />
+            Text="Thanks for your support, our dear pets can sleep tight!" />
 
     </Grid>
 </ContentPage>

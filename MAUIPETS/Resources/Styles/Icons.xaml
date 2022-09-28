@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:FontIcons="clr-namespace:MAUIPETS.CodeFontIcons">
+    <!--#region FontImageSource INTERFACES-->
+    <FontImageSource
+        x:Key="icon_paw"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Paw}"
+        Size="24"
+        Color="Orange"
+        />
+
+
+    <FontImageSource
+        x:Key="icon_calendar"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Calendar}"
+        Size="24"
+        Color="Orange"
+        />
+    <FontImageSource
+        x:Key="icon_facebook"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Facebook}"
+        Size="24"
+        Color="Orange"
+        />
+    <FontImageSource
+        x:Key="icon_google"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Google}"
+        Size="24"
+        Color="Orange"
+        />
+    <FontImageSource
+        x:Key="icon_gplus"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Gplus}"
+        Size="24"
+        Color="Orange"
+        />
+    <FontImageSource
+        x:Key="icon_heart"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Heart}"
+        Size="24"
+        Color="Red"
+        />
+    <FontImageSource
+        x:Key="icon_linkedin"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Linkedin}"
+        Size="24"
+        Color="Orange"
+        />
+    <FontImageSource
+        x:Key="icon_minuscircled"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.MinusCircled}"
+        Size="24"
+        Color="GreenYellow"
+        />
+    <FontImageSource
+        x:Key="icon_pluscircled"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.PlusCircled}"
+        Size="24"
+        Color="GreenYellow"
+        />
+    <FontImageSource
+        x:Key="icon_star"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Star}"
+        Size="24"
+        Color="GreenYellow"
+        />
+    <FontImageSource
+        x:Key="icon_twitter"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Twitter}"
+        Size="24"
+        Color="GreenYellow"
+        />
+    <FontImageSource
+        x:Key="icon_users"
+        FontFamily="Fontello"
+        Glyph="{x:Static FontIcons:Fontello.Users}"
+        Size="24"
+        Color="GreenYellow"
+        />
+    <!--#endregion-->
+</ResourceDictionary>

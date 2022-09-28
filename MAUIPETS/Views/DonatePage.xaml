@@ -3,21 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUIPETS.Views.DonatePage"
              Title="Please Donate">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".05*" />
-            <ColumnDefinition Width=".9*" />
-            <ColumnDefinition Width=".05*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="300" />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-        </Grid.RowDefinitions>
+    <Grid ColumnDefinitions=".05*,.9*,.05*" RowDefinitions="60,60,300,30,50,50,50">
+        <!-- 1. Title-->
         <Label FontSize="30" HorizontalTextAlignment="Start" Grid.Column="1" TranslationY="20" TextColor="Black" >
             <Label.FormattedText>
                 <FormattedString>
@@ -38,24 +25,35 @@
             VerticalOptions="Start"
             HorizontalOptions="Start"
             TextColor="Black" />
+        <!-- 2. Image-->
         <Frame
             Grid.Row="2"
             Grid.Column="1"
             BackgroundColor="#9EFADC"
             CornerRadius="20"
+            HasShadow="True"
             BorderColor="#89E2FA">
+            <Frame.Shadow>
+                <Shadow Brush="Black"
+                            Offset="6,10"
+                            Opacity="0.8    "
+                            />
+            </Frame.Shadow>
             <Image
                 x:Name="Imagedog"
                 Source="dog2"
                 HeightRequest="60"
                 HorizontalOptions="Center"/>
         </Frame>
+        <!-- 3. Donate options -->
         <StackLayout
             Grid.Row="4"
             Grid.Column="1"
             HorizontalOptions="Center"
             Orientation="Horizontal">
             <Button
+                BorderColor="DarkOrange"
+                BorderWidth="3"
                 x:Name="donate25"
                 Margin="5"
                 Clicked="donate25_Clicked"
@@ -65,6 +63,8 @@
                 FontAttributes="Bold"
                 CornerRadius="10" />
             <Button
+                BorderColor="DarkOrange"
+                BorderWidth="3"
                 x:Name="donate50"
                 Margin="5"
                 Clicked="donate50_Clicked"
@@ -74,6 +74,8 @@
                 CornerRadius="10"
                 FontAttributes="Bold" />
             <Button
+                BorderColor="DarkOrange"
+                BorderWidth="3"
                 x:Name="donate100"
                 Margin="5"
                 Clicked="donate100_Clicked"
@@ -89,16 +91,25 @@
             Grid.Column="1"
             HorizontalOptions="CenterAndExpand"
             Text="Thanks for your support " />
-
+        <!-- 4. Button Donate-->
         <Button
             x:Name="Donate"
             Grid.Row="6"
             Grid.Column="1"
             BackgroundColor="Orange"
+            BorderColor="OrangeRed"
             Text="Please Donate"
             TextColor="White"
             FontAttributes="Bold"
-            CornerRadius="20" 
-            Clicked="Donate_Clicked"/>
+            CornerRadius="20"
+            Clicked="Donate_Clicked">
+            <Button.Shadow>
+                <Shadow Brush="Black"
+                            Offset="6,10"
+                            Opacity="0.8    "
+                            />
+            </Button.Shadow>
+
+        </Button>
     </Grid>
 </ContentPage>

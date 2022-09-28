@@ -1,20 +1,15 @@
-﻿using System;
-using MAUIPETS.Models;
+﻿namespace MAUIPETS.ViewModels;
 
-namespace MAUIPETS.ViewModels
+[QueryProperty(nameof(Pet), "Pet")]
+public partial class PetDetailsViewModel : BaseViewModel
 {
-    public class PetDetailsViewModel : BaseViewModel
+    public PetDetailsViewModel()
     {
-
-        public Pet Pets { get; set; }
-
-        public PetDetailsViewModel(Pet pet)
-        {
-            Title = $"Scroll {pet.Name} Details";
-
-            Pets = pet;
-        }
-
     }
+
+    [ObservableProperty]
+    Pet pet;
+
 }
+
 

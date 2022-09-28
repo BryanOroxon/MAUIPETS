@@ -10,26 +10,29 @@
     </ContentPage.BindingContext>
     <VerticalStackLayout>
         <Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="300" />
-                    <RowDefinition Height="150" />
-
-                </Grid.RowDefinitions>
+            <Grid RowDefinitions="200,300,150" ColumnDefinitions="0.2*,Auto,0.2*" >
+                <!-- 1. Image-->
                 <Image
                     Grid.Row="0"
+                    Grid.Column="1"
                     Source="dotnet_bot"
                     WidthRequest="80"/>
+                <!-- 2. Data App-->
                 <Frame
                     Grid.Row="1"
+                    Grid.Column="1"
                     Margin="15,5,15,5"
                     BackgroundColor="Black"
-                    Opacity=".6"
                     BorderColor="OrangeRed"
+                    
                     HasShadow="True"
                     CornerRadius="20">
-
+                    <Frame.Shadow>
+                        <Shadow Brush="Black"
+                                Offset="20,20"
+                            Opacity="0.9   "
+                            />
+                    </Frame.Shadow>
                     <StackLayout VerticalOptions="Center">
                         <Label
                             Text="MAUIPETS"
@@ -45,7 +48,7 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans> 
-                                        <Span Text="&#xf309;" TextColor="White" FontFamily="fontello" FontSize="20" />
+                                        <Span Text="&#xf309;" TextColor="#1dcaff" FontFamily="fontello" FontSize="20" />
                                         <Span Text=" @BryanOroxon" FontSize="16" TextColor="White" FontAttributes="Bold" />
                                     </FormattedString.Spans>
                                 </FormattedString>
@@ -55,7 +58,7 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span Text="&#xf318;" TextColor="White" FontFamily="fontello" FontSize="20" />
+                                        <Span Text="&#xf318;" TextColor="#00a0dc" FontFamily="fontello" FontSize="20" />
                                         <Span Text=" www.linkedin.com/in/bryan-oroxon" FontSize="16" TextColor="White" FontAttributes="Bold" />
                                     </FormattedString.Spans>
                                 </FormattedString>
@@ -65,12 +68,12 @@
                             FontSize="Medium"
                             x:Name="LabelName"
                             Text=""
-                            TextColor="White"
+                            TextColor="#1dcaff"
                             FontAttributes="Bold" />
                         <Label
                             x:Name="LabelVersion"
                             Text=" 0 "
-                            TextColor="White"
+                            TextColor="#00a0dc"
                             FontAttributes="Bold" />
                         <Label
                             Text="This App was made for .NET MAUI CHALLENGE"
@@ -79,8 +82,10 @@
                     </StackLayout>
 
                 </Frame>
+                <!-- 3. Button-->
                 <Button
                     Grid.Row="2"
+                    Grid.Column="1"
                     Margin="15"
                     HeightRequest="60"
                     CornerRadius="20"
@@ -89,7 +94,16 @@
                     TextColor="White"
                     FontAttributes="Bold"
                     FontSize="Medium"
-                    Text="To learn more about .NET MAUI, press here" />
+                    Text="To learn more about .NET MAUI, press here" >
+                    <Button.Shadow>
+                        <Shadow Brush="Black"
+                            Offset="6,10"
+                            Opacity="0.8    "
+                            />
+
+                    </Button.Shadow>
+
+                </Button>
             </Grid>
         </Grid>
     </VerticalStackLayout>

@@ -1,4 +1,5 @@
-﻿using MAUIPETS.ViewModels;
+﻿using MAUIPETS.Models;
+using MAUIPETS.ViewModels;
 using MAUIPETS.Views;
 
 namespace MAUIPETS.Views;
@@ -7,16 +8,27 @@ public partial class HomePage : ContentPage
 {
     public HomePageViewModel viewModel;
 
-	public HomePage()
+	public HomePage(HomePageViewModel vm)
 	{
-        BindingContext = viewModel = new HomePageViewModel();
         InitializeComponent();
-
-       PetsList.ItemsSource = viewModel.Pets;
+        BindingContext = vm;
     }
 
     private async void Donate_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new DonatePage());
+    }
+
+
+    private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+    {
+        var pet = ((VisualElement)sender).BindingContext as Pet;
+
+        if (pet == null)
+            return;
+        await Shell.Current.GoToAsync(nameof(PetDetailsView), true, new Dictionary<string, object>
+        {
+            {"Pet", pet }
+        });
     }
 }

@@ -51,12 +51,16 @@
 	  <None Remove="ViewModels\" />
 	  <None Remove="Services\" />
 	  <None Remove="Refractored.MvvmHelpers" />
+	  <None Remove="CodeFontIcons\" />
+	  <None Remove="CommunityToolkit.Mvvm" />
+	  <None Remove="System.Text.Json" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Services\" />
+	  <Folder Include="CodeFontIcons\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Views\HomePage.xaml">
@@ -80,8 +84,12 @@
 	  <MauiXaml Update="Views\CustomSplashScreen.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Icons.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	  <PackageReference Include="System.Text.Json" Version="6.0.6" />
 	</ItemGroup>
 </Project>

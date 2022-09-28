@@ -1,0 +1,88 @@
+is_global = true
+build_property.TargetFramework = net6.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MAUIPETS
+build_property.ProjectDir = C:\Repos\Last\MAUIPETS\
+
+[C:/Repos/Last/MAUIPETS/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Repos/Last/MAUIPETS/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Repos/Last/MAUIPETS/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Repos/Last/MAUIPETS/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Repos/Last/MAUIPETS/Resources/Styles/Icons.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Resources.Styles.Icons.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Icons.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Icons.xaml
+
+[C:/Repos/Last/MAUIPETS/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/._HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.._HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\._HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\._HomePage.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/AboutPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.AboutPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AboutPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AboutPage.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/CustomSplashScreen.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.CustomSplashScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CustomSplashScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CustomSplashScreen.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/DonatePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.DonatePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DonatePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DonatePage.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/Donation.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.Donation.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Donation.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Donation.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
+
+[C:/Repos/Last/MAUIPETS/Views/PetDetailsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.PetDetailsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PetDetailsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PetDetailsView.xaml
