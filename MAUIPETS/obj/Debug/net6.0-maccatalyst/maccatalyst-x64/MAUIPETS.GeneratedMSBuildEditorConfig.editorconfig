@@ -21,12 +21,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Repos/Last/MAUIPETS/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
 [C:/Repos/Last/MAUIPETS/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Resources.Styles.Colors.xaml
@@ -44,12 +38,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
-
-[C:/Repos/Last/MAUIPETS/Views/._HomePage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MAUIPETS.Views.._HomePage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\._HomePage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\._HomePage.xaml
 
 [C:/Repos/Last/MAUIPETS/Views/AboutPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

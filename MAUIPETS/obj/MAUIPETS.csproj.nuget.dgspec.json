@@ -61,6 +61,10 @@
         "net6.0-android31.0": {
           "targetAlias": "net6.0-android",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.486, )",
@@ -71,9 +75,9 @@
               "version": "[6.0.486, )",
               "autoReferenced": true
             },
-            "Refractored.MvvmHelpers": {
+            "System.Text.Json": {
               "target": "Package",
-              "version": "[1.6.2, )"
+              "version": "[6.0.6, )"
             }
           },
           "imports": [
@@ -123,6 +127,10 @@
         "net6.0-ios15.4": {
           "targetAlias": "net6.0-ios",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.486, )",
@@ -133,14 +141,14 @@
               "version": "[6.0.486, )",
               "autoReferenced": true
             },
-            "Refractored.MvvmHelpers": {
-              "target": "Package",
-              "version": "[1.6.2, )"
-            },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
               "version": "[6.0.1, )",
               "autoReferenced": true
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             }
           },
           "imports": [
@@ -176,6 +184,10 @@
         "net6.0-maccatalyst15.4": {
           "targetAlias": "net6.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.486, )",
@@ -186,14 +198,14 @@
               "version": "[6.0.486, )",
               "autoReferenced": true
             },
-            "Refractored.MvvmHelpers": {
-              "target": "Package",
-              "version": "[1.6.2, )"
-            },
             "System.Runtime.InteropServices.NFloat.Internal": {
               "target": "Package",
               "version": "[6.0.1, )",
               "autoReferenced": true
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             }
           },
           "imports": [
@@ -230,6 +242,10 @@
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Maui.Dependencies": {
               "target": "Package",
               "version": "[6.0.486, )",
@@ -246,9 +262,9 @@
               "version": "[10.0.22000.194, )",
               "autoReferenced": true
             },
-            "Refractored.MvvmHelpers": {
+            "System.Text.Json": {
               "target": "Package",
-              "version": "[1.6.2, )"
+              "version": "[6.0.6, )"
             }
           },
           "imports": [

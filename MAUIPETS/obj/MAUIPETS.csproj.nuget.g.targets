@@ -81,9 +81,21 @@
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide.disklrucache\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.DiskLruCache.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide.disklrucache\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.DiskLruCache.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide.annotations\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.Annotations.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide.annotations\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.Annotations.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide\4.12.0.8\buildTransitive\net6.0-android31.0\Xamarin.Android.Glide.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets" Condition="Exists('$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets" Condition="Exists('$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets')" />
+  </ImportGroup>
+  <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets" Condition="Exists('$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net6.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\6.0.6\build\System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.windows.sdk.buildtools\10.0.22000.194\build\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windows.sdk.buildtools\10.0.22000.194\build\Microsoft.Windows.SDK.BuildTools.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk\1.1.3\buildTransitive\Microsoft.WindowsAppSDK.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk\1.1.3\buildTransitive\Microsoft.WindowsAppSDK.targets')" />
+    <Import Project="$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets" Condition="Exists('$(NuGetPackageRoot)communitytoolkit.mvvm\8.0.0\buildTransitive\netstandard2.1\CommunityToolkit.Mvvm.targets')" />
   </ImportGroup>
 </Project>
